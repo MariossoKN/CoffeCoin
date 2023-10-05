@@ -1,6 +1,14 @@
-// this script creates the proofs for the inserted address (line 10)
-// the create merkle tree script has to be run first and the tree.json has to be created
-// to run this script run this in the terminal: yarn hardhat run scripts/createMerkleTreeProof.js
+/**
+ * Merkle Tree Proof Generation Script
+ *
+ * This script is used to generate a Merkle Tree proof for the specified address. It loads the
+ * pre-generated Merkle Tree and extracts the proof for the specified address.
+ *
+ * To use this script:
+ * - Ensure that the Merkle Tree JSON file 'tree.json' is generated.
+ * - Specify the target address you want to generate a proof for in the 'if' condition.
+ * - Run the script using: yarn hardhat run scripts/createMerkleTreeProof.js.
+ */
 
 const { StandardMerkleTree } = require("@openzeppelin/merkle-tree")
 const fs = require("fs")

@@ -1,5 +1,15 @@
-// this script creates a merkle tree of defined values. It also creates a tree.json file with the merkle data
-// to run this script run this in the terminal: yarn hardhat run scripts/createMerkleTree.js
+/**
+ * Merkle Tree Generation Script
+ *
+ * This script is used to generate a Merkle Tree for CoffeCoin token allowlist
+ * verification. It calculates the Merkle root and creates a tree.json file.
+ *
+ * To use this script:
+ * - Update the 'values' array with the allowlisted addresses, their corresponding index,
+ *   and the amount of tokens to mint.
+ * - Run the script using: yarn hardhat run scripts/createMerkleTree.js.
+ *
+ */
 
 const { StandardMerkleTree } = require("@openzeppelin/merkle-tree")
 const fs = require("fs")

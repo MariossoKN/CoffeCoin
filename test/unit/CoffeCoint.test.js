@@ -24,10 +24,6 @@ const { developmentChains, networkConfig } = require("../../helper.hardhat.confi
           beforeEach(async function () {
               deployer = (await getNamedAccounts()).deployer
               await deployments.fixture(["coffeCoin"])
-
-              //   const coffeCoinDeployment = await deployments.get("CoffeCoin")
-              //   fundMe = await ethers.getContractAt("CoffeCoin", coffeCoinDeployment?.address || "")
-
               coffeCoin = await ethers.getContract("CoffeCoin", deployer)
               chainId = network.config.chainId
               accounts = await ethers.getSigners()
